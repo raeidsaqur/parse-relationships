@@ -10,12 +10,15 @@ import UIKit
 import Parse
 
 class ViewController: UIViewController {
+    
+    var songsList = [Song]()
+    var artistsList =  [Artist]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//         createArtists()
-//         createSongs()
+         createArtists()
+         createSongs()
 
 //        let kendrick = getKendrick()
 //        let i = getI()
@@ -25,7 +28,7 @@ class ViewController: UIViewController {
 //        let weAreNeverEverGettingBackTogether = getNever()
 //        let shakeItOff = getShakeItOff()
 //
-        let badBlood = getBadBlood()
+        //let badBlood = getBadBlood()
 
         print("\n\n\n")
 
@@ -172,6 +175,7 @@ class ViewController: UIViewController {
 
     func createSongs() {
         let i = Song(name: "i")
+        
         i.saveInBackgroundWithBlock { (success, error) in
             if let error = error {
                 print(error.description)
@@ -181,6 +185,7 @@ class ViewController: UIViewController {
         }
 
         let swimmingPools = Song(name: "Swimming Pools")
+        
         swimmingPools.saveInBackgroundWithBlock { (success, error) in
             if let error = error {
                 print(error.description)
@@ -188,8 +193,11 @@ class ViewController: UIViewController {
             }
             print("saved " + swimmingPools.name)
         }
+        
+        
 
         let weAreNeverEverGettingBackTogether = Song(name: "We Are Never Ever Getting Back Together")
+        
         weAreNeverEverGettingBackTogether.saveInBackgroundWithBlock { (success, error) in
             if let error = error {
                 print(error.description)
