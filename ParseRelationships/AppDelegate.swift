@@ -15,8 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        //Parse dashboard: https://dashboard.parse.com/apps/w5d2/browser
+        
+        //RS:
+        Parse.setApplicationId("xtEjMcegWqHvab4NpUkinqwQmOWwLWaASTNS3Vvk", clientKey: "7DechhSEs6LBkmfKXebdmEx4SBv9DeyHCNfaOkgk")
+        //IC:
+//        Parse.setApplicationId("PZzGTD8UFGZlKQLmHyeMxxGI2FYvFp7XlQAnNisZ", clientKey: "8RRx1K4yII8EEf01u1008PqwKcRZLttM7CPFNxP9")
 
-        Parse.setApplicationId("PZzGTD8UFGZlKQLmHyeMxxGI2FYvFp7XlQAnNisZ", clientKey: "8RRx1K4yII8EEf01u1008PqwKcRZLttM7CPFNxP9")
 
         Artist.registerSubclass()
         Song.registerSubclass()
